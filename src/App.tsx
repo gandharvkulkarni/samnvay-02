@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Scale, Users, FileText, Shield, Award, Menu, X, CheckCircle, ArrowRight, Sparkles, Zap, Clock } from 'lucide-react';
-import logo from '../../Samnvay-logo.png';
-import logoWhite from '../../Samnvay-logo-white.png';
+import logo from '../Samnvay-logo.png';
+import logoWhite from '../Samnvay-logo-white.png';
 
 
 function App() {
