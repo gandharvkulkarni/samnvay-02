@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Scale, Users, FileText, Shield, Award, Menu, X, CheckCircle, ArrowRight, Sparkles, Zap, Clock } from 'lucide-react';
+import logo from '../../Samnvay-logo.png';
+import logoWhite from '../../Samnvay-logo-white.png';
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +57,7 @@ function App() {
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <img src='./Samnvay-logo.png' alt='JusticeHub Logo' className='w-48' />
+            <img src={logo} alt='Samnvay Logo' className='w-48' />
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
@@ -465,7 +468,7 @@ function App() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <p className="text-gray-600">contact@samnvay.com</p>
+                    <p className="text-gray-600">alaka@samnvay.com</p>
                   </div>
                 </div>
 
@@ -525,7 +528,7 @@ function App() {
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col items-center justify-center space-y-6">
             <div className="flex items-center space-x-3">
-             <img src='./Samnvay-logo-white.png' alt='JusticeHub Logo' className='w-48' />
+             <img src={logoWhite} alt='Samnvay Logo' className='w-48' />
             </div>
 
             <p className="text-center text-gray-400 max-w-md">
