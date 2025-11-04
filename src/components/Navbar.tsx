@@ -4,14 +4,14 @@ import { Menu, X } from 'lucide-react';
 const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'services', label: 'Services' },
-    { id: 'how-it-works', label: 'How It Works' },
     { id: 'why-us', label: 'Why Choose Us' },
+    { id: 'services', label: 'Services' },
+    // { id: 'how-it-works', label: 'How It Works' },
     { id: 'contact', label: 'Contact' },
 ];
 const Navbar = ({scrollToSection, isMenuOpen, setIsMenuOpen, scrollY, activeSection}: any) => {
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-white/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-white/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
             }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">

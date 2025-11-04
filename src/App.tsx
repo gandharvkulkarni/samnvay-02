@@ -3,10 +3,12 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import HowItWorks from './components/HowItWorks';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Disclaimer from './components/Disclaimer';
+import SamnvayWayToResolveDisputes from './components/SamnvayWayToResolveDisputes';
+import BookConsultation from './components/BookConsultation';
 
 
 function App() {
@@ -49,29 +51,33 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
+      <Disclaimer />
       {/* Navigation */}
-     <Navbar scrollY={scrollY} activeSection={activeSection} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} scrollToSection={scrollToSection} />
+      <Navbar scrollY={scrollY} activeSection={activeSection} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} scrollToSection={scrollToSection} />
 
       {/* Hero Section */}
-      <Hero/>
+      <Hero scrollToSection={scrollToSection} />
 
       {/* About Section */}
-      <About/>
-
-      {/* Services Section */}
-      <Services/>
-
-      {/* How It Works Section */}
-      <HowItWorks/>
+      <About />
 
       {/* Why Choose Us Section */}
-      <WhyChooseUs/>
+      <WhyChooseUs />
+
+      {/* Samnvay Way to Resolve Disputes Section */}
+      <SamnvayWayToResolveDisputes />
+
+      {/* Services Section */}
+      <Services />
 
       {/* Contact Section */}
-      <Contact scrollToSection={scrollToSection}/>
+      <Contact scrollToSection={scrollToSection} />
+
+      {/* Book Consultation Section */}
+      <BookConsultation />
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
