@@ -1,11 +1,11 @@
 export const financialDisputeType = [
-    "Loan Default",
-    "Recovery of Dues",
-    "Overdue Interest / Penalty",
-    "Settlement Negotiation",
-    "Credit Card / EMI Dispute",
-    "Mortgage / Hypothecation Issue",
-    "Other",
+  "Loan Default",
+  "Recovery of Dues",
+  "Overdue Interest / Penalty",
+  "Settlement Negotiation",
+  "Credit Card / EMI Dispute",
+  "Mortgage / Hypothecation Issue",
+  "Other",
 ]
 
 export const financialDocumentType = [
@@ -17,8 +17,16 @@ export const financialDocumentType = [
   { key: "other", value: "Other" }
 ];
 
-
 export const loanType = ["Personal", "Business", "Home", "Vehicle", "Credit Card", "Other"]
+
+export const financialReliefSought = [
+  "Restructuring of Loan",
+  "Waiver / Reduction of Interest",
+  "Settlement of Dues",
+  "Closure / NOC",
+  "Other"
+]
+
 
 export const familyCaseCategory = ["Family", "Matrimonial", "Custody", "Maintenance", "Property", "Other"]
 
@@ -47,11 +55,11 @@ export const familyReliefOptions = [
 export const marriageType = ["Hindu", "Muslim", "Christian", "Special Marriage Act", "Other"]
 
 export const employmentDisputeType = [
-    "Wrongful Termination",
-    "Unpaid Salary / Dues",
-    "Contractual Breach (Employment Agreement / NDA / Offer Letter)",
-    "Workplace Harassment / Discrimination",
-    "Non-Compete / Restrictive Covenants",
+  "Wrongful Termination",
+  "Unpaid Salary / Dues",
+  "Contractual Breach (Employment Agreement / NDA / Offer Letter)",
+  "Workplace Harassment / Discrimination",
+  "Non-Compete / Restrictive Covenants",
 ]
 
 export const employmentDocumentType = [
@@ -63,21 +71,21 @@ export const employmentDocumentType = [
 ];
 
 export const employmentReliefSought = [
-    "Compensation",
-    "Reinstatement",
-    "Full & Final Settlement",
-    "Apology",
-    "Experience Letter",
+  "Compensation",
+  "Reinstatement",
+  "Full & Final Settlement",
+  "Apology",
+  "Experience Letter",
 ]
 
 export const consumerDisputeType = [
-    "Product Defect",
-    "Delay in Delivery",
-    "Warranty Issue",
-    "Refund / Replacement",
-    "Misleading Advertisement",
-    "Overcharging",
-    "Other",
+  "Product Defect",
+  "Delay in Delivery",
+  "Warranty Issue",
+  "Refund / Replacement",
+  "Misleading Advertisement",
+  "Overcharging",
+  "Other",
 ]
 
 export const consumerDocumentType = [
@@ -90,10 +98,10 @@ export const consumerDocumentType = [
 ];
 
 export const consumerReliefSought = [
-    "Full Refund",
-    "Replacement / Repair",
-    "Compensation",
-    "Service Completion",
-    "Apology",
-    "Other",
+  "Full Refund",
+  "Replacement / Repair",
+  "Compensation",
+  "Service Completion",
+  "Apology",
+  "Other",
 ]

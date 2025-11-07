@@ -24,6 +24,7 @@ import { RadioOption } from "./ui/RadioOption"
 import { FamilyDispute } from "@/types/FamilyDisputeForm"
 import { familyCaseCategory, familyDocumentType, familyReliefOptions, marriageType } from "@/enums/enums"
 import FileUploadForm from "./ui/FileUploadForm"
+import ConfidentialityNote from "@/components/ConfidentialityNote"
 
 export default function FamilyDisputeForm() {
 
@@ -579,6 +580,9 @@ export default function FamilyDisputeForm() {
                             </FormField>
                         </div>
                     </SectionCard>
+
+                    <ConfidentialityNote />
+
 
                     {/* Submit Buttons */}
                     <div className="flex gap-4 justify-end">

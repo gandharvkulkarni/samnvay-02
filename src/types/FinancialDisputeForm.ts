@@ -25,19 +25,11 @@ export type FinancialForm = {
   collateral?: string
 
   disputeSummary?: string
-  loandocument?: boolean
-  paymentReceipts?: boolean
-  demandNotice?: boolean
-  emailCommunication?: boolean
-  settlementOffer?: boolean
-  otherDocuments?: string
   stepsAlreadyTaken?: string
 
-  restructuring?: boolean
-  waiverReduction?: boolean
-  settlementDues?: boolean
-  closure?: boolean
   otherRelief?: string
+  reliefSought: string
+  
 
   mediationWillingness?: string
   mediationPreferences?: string

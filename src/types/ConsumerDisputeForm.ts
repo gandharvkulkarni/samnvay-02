@@ -30,9 +30,6 @@ export type ConsumerDispute = {
     issue: string
     summary: string
 
-    // === Section 5: Supporting Documents ===
-    documentType?: string // e.g. ["Invoice", "Order Confirmation"]
-
     // === Section 6: Steps Already Taken ===
     stepsToResolve?: string
 

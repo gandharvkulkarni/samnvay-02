@@ -20,6 +20,7 @@ import { YesNoField } from "./ui/YesNoField"
 import { ConsumerDispute } from "@/types/ConsumerDisputeForm"
 import { consumerDisputeType, consumerDocumentType, consumerReliefSought } from "@/enums/enums"
 import FileUploadForm from "./ui/FileUploadForm"
+import ConfidentialityNote from "@/components/ConfidentialityNote"
 
 
 export default function ConsumerDisputeForm() {
@@ -295,6 +296,8 @@ export default function ConsumerDisputeForm() {
                             </FormField>
                         </div>
                     </SectionCard>
+
+                    <ConfidentialityNote/>
 
                     <div className="flex gap-4 justify-end">
                         <Button type="submit" disabled={isSubmitting} className="bg-linear-to-r from-emerald-500 to-teal-500 hover:opacity-90 text-white">

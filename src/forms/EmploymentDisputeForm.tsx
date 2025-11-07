@@ -19,6 +19,7 @@ import { FormField } from "./ui/FormField"
 import { SectionCard } from "./ui/SectionCard"
 import { employmentDisputeType, employmentDocumentType, employmentReliefSought } from "@/enums/enums"
 import FileUploadForm from "./ui/FileUploadForm"
+import ConfidentialityNote from "@/components/ConfidentialityNote"
 
 export default function EmploymentDisputeForm() {
     const { register, handleSubmit, control, reset, watch, formState: { errors, isSubmitting } } = useForm<EmploymentDispute>()
@@ -290,6 +291,8 @@ export default function EmploymentDisputeForm() {
                             </FormField>
                         </div>
                     </SectionCard>
+
+                    <ConfidentialityNote/>
 
                     <div className="flex gap-4 justify-end">
                         <Button type="submit" disabled={isSubmitting} className="bg-linear-to-r from-emerald-500 to-teal-500 hover:opacity-90 text-white">

@@ -17,8 +17,9 @@ import { addDataToGoogleSheet, getFormData } from "@/lib/utils"
 import { FormField } from "./ui/FormField"
 import { SectionCard } from "./ui/SectionCard"
 import { FinancialForm } from "@/types/FinancialDisputeForm"
-import { financialDisputeType, financialDocumentType, loanType } from "@/enums/enums"
+import { financialDisputeType, financialDocumentType, financialReliefSought, loanType } from "@/enums/enums"
 import FileUploadForm from "./ui/FileUploadForm"
+import ConfidentialityNote from "@/components/ConfidentialityNote"
 
 
 export default function FinancialDisputeForm() {
@@ -228,9 +229,31 @@ export default function FinancialDisputeForm() {
                             <Textarea placeholder="Mention negotiation, communication, or prior complaint..." className="min-h-24" {...register("stepsAlreadyTaken")} />
                         </FormField>
 
-                        <FormField label="Other Relief (if any)">
-                            <Input placeholder="Specify relief sought" {...register("otherRelief")} />
+                        <FormField label="Select the relief(s) you seek" required error={errors.reliefSought?.message}>
+                            <Controller
+                                control={control}
+                                name="reliefSought"
+                                rules={{ required: "Please select a relief you seek" }}
+                                render={({ field }) => (
+                                    <Select value={field.value} onValueChange={field.onChange}>
+                                        <SelectTrigger>
+                                            <SelectValue placeholder="Select Relief You Seek" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            {financialReliefSought.map(v => (
+                                                <SelectItem key={v} value={v}>{v}</SelectItem>
+                                            ))}
+                                        </SelectContent>
+                                    </Select>
+                                )}
+                            />
                         </FormField>
+
+                        {watch("reliefSought") === "Other" && (
+                            <FormField label="Issues or Reliefs Sought" className="mt-6">
+                                <Textarea placeholder="Describe issues or reliefs sought" {...register("otherRelief")} />
+                            </FormField>
+                        )}
                     </SectionCard>
 
                     {/* Documents */}
@@ -279,6 +302,8 @@ export default function FinancialDisputeForm() {
                             </FormField>
                         </div>
                     </SectionCard>
+
+                    <ConfidentialityNote/>
 
                     {/* Submit */}
                     <div className="flex justify-end gap-3">
