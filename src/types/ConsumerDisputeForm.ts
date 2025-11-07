@@ -34,7 +34,8 @@ export type ConsumerDispute = {
     stepsToResolve?: string
 
     // === Section 7: Relief Sought ===
-    reliefSought?: string // e.g. ["Full Refund", "Compensation"]
+    otherRelief: string,
+    reliefSought: string
 
     // === Section 8: Mediation ===
     mediationWillingness: string,

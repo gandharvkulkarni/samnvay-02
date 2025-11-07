@@ -258,6 +258,12 @@ export default function ConsumerDisputeForm() {
                                 )}
                             />
                         </FormField>
+
+                        {watch("reliefSought") === "Other" && (
+                            <FormField label="Issues or Reliefs Sought" className="mt-6">
+                                <Textarea placeholder="Describe issues or reliefs sought" {...register("otherRelief")} />
+                            </FormField>
+                        )}
                     </SectionCard>
 
                     {/* === SECTION 8: MEDIATION === */}
@@ -289,15 +295,15 @@ export default function ConsumerDisputeForm() {
                     <SectionCard number="9" title="Declaration">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <FormField label="Full Name" required error={errors?.declarationName?.message}>
-                                <Input placeholder="Enter your full name" {...register("declarationName", {required: "Please provide your name"})} />
+                                <Input placeholder="Enter your full name" {...register("declarationName", { required: "Please provide your name" })} />
                             </FormField>
                             <FormField label="Date" required error={errors?.declarationDate?.message}>
-                                <Input type="date" {...register("declarationDate", {required:"Please enter declaration date"})} />
+                                <Input type="date" {...register("declarationDate", { required: "Please enter declaration date" })} />
                             </FormField>
                         </div>
                     </SectionCard>
 
-                    <ConfidentialityNote/>
+                    <ConfidentialityNote />
 
                     <div className="flex gap-4 justify-end">
                         <Button type="submit" disabled={isSubmitting} className="bg-linear-to-r from-emerald-500 to-teal-500 hover:opacity-90 text-white">
