@@ -76,6 +76,7 @@ export const employmentReliefSought = [
   "Full & Final Settlement",
   "Apology",
   "Experience Letter",
+  "Other"
 ]
 
 export const consumerDisputeType = [
