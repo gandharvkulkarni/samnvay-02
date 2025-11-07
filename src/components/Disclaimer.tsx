@@ -53,7 +53,7 @@ const Disclaimer = () => {
               <div className="mt-6 flex justify-center">
                 <Button
                   onClick={handleClose}
-                  className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                  className="bg-linear-to-r from-emerald-600 to-teal-600 text-white px-6 py-2 rounded-lg font-medium transition-colors"
                 >
                   I Understand
                 </Button>

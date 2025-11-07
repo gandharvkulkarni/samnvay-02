@@ -63,7 +63,7 @@ const Navbar = () => {
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
                                 className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${activeSection === item.id
-                                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg scale-105'
+                                    ? 'bg-linear-to-r from-emerald-500 to-teal-500 text-white shadow-lg scale-105'
                                     : 'text-gray-700 hover:bg-emerald-50 hover:text-emerald-600'
                                     }`}
                             >
@@ -91,7 +91,7 @@ const Navbar = () => {
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
                                 className={`block w-full text-left px-4 py-3 rounded-xl text-base font-semibold transition-all ${activeSection === item.id
-                                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                    ? 'bg-linear-to-r from-emerald-500 to-teal-500 text-white shadow-md'
                                     : 'text-gray-700 hover:bg-emerald-50'
                                     }`}
                             >

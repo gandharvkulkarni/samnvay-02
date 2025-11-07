@@ -59,7 +59,7 @@ export default function RulesPage() {
                 <section>
                     <div className="bg-card rounded-lg p-6 md:p-8 border border-teal-500/50 shadow-sm">
                         <div className="flex gap-4 mb-6 items-start">
-                            <HandshakeIcon className="w-8 h-8 text-teal-500 flex-shrink-0" />
+                            <HandshakeIcon className="w-8 h-8 text-teal-500 shrink-0" />
                             <div>
                                 <h2 className="text-2xl font-bold text-foreground mb-2">Online Negotiation</h2>
                                 <p className="text-foreground/70">
@@ -79,7 +79,7 @@ export default function RulesPage() {
                 <section>
                     <div className="bg-card rounded-lg p-6 md:p-8 border border-teal-500/50 shadow-sm">
                         <div className="flex gap-4 mb-6 items-start">
-                            <Leaf className="w-8 h-8 text-teal-500 flex-shrink-0" />
+                            <Leaf className="w-8 h-8 text-teal-500 shrink-0" />
                             <div>
                                 <h2 className="text-2xl font-bold text-foreground mb-2">Online Mediation</h2>
                                 <p className="text-foreground/70">
@@ -99,7 +99,7 @@ export default function RulesPage() {
                 <section>
                     <div className="bg-card rounded-lg p-6 md:p-8 border border-teal-500/50 shadow-sm">
                         <div className="flex gap-4 mb-6 items-start">
-                            <Scale className="w-8 h-8 text-teal-500 flex-shrink-0" />
+                            <Scale className="w-8 h-8 text-teal-500 shrink-0" />
                             <div>
                                 <h2 className="text-2xl font-bold text-foreground mb-2">Online Conciliation</h2>
                                 <p className="text-foreground/70">
@@ -119,7 +119,7 @@ export default function RulesPage() {
                 <section>
                     <div className="bg-card rounded-lg p-6 md:p-8 border border-teal-500/50 shadow-sm">
                         <div className="flex gap-4 mb-6 items-start">
-                            <Gavel className="w-8 h-8 text-teal-500 flex-shrink-0" />
+                            <Gavel className="w-8 h-8 text-teal-500 shrink-0" />
                             <div>
                                 <h2 className="text-2xl font-bold text-foreground mb-2">Online Arbitration</h2>
                                 <p className="text-foreground/70">

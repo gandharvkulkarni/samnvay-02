@@ -1,4 +1,4 @@
-import { Globe, DollarSign, Lock, Zap, Handshake } from "lucide-react";
+import { Globe, DollarSign, Lock, Zap } from "lucide-react";
 
 const reasons = [
   {
@@ -25,7 +25,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section id="why-us" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
+    <section id="why-us" className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-emerald-50 via-teal-50 to-cyan-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
               className="group bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 p-3 bg-gradient-to-br from-emerald-500 to-teal-500 text-white rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <div className="shrink-0 p-3 bg-linear-to-br from-emerald-500 to-teal-500 text-white rounded-xl group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <div className="flex-1">

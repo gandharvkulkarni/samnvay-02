@@ -5,7 +5,7 @@ const About = () => {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center space-x-3 mb-12">
-            <div className="w-2 h-12 bg-gradient-to-b from-emerald-600 to-teal-600 rounded-full"></div>
+            <div className="w-2 h-12 bg-linear-to-b from-emerald-600 to-teal-600 rounded-full"></div>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
               About Us
             </h2>
@@ -22,10 +22,10 @@ const About = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-200 to-teal-200 rounded-3xl opacity-30"></div>
-              <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-3xl border-2 border-emerald-200">
+              <div className="absolute inset-0 bg-linear-to-br from-emerald-200 to-teal-200 rounded-3xl opacity-30"></div>
+              <div className="relative bg-linear-to-br from-emerald-50 to-teal-50 p-8 rounded-3xl border-2 border-emerald-200">
                 <div className="flex items-start space-x-3 mb-4">
-                  <Sparkles className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <Sparkles className="w-6 h-6 text-emerald-600 shrink-0 mt-1" />
                   <div>
                     <p className="font-bold text-xl text-gray-900 mb-2">Our Goal</p>
                     <p className="text-gray-700 leading-relaxed">

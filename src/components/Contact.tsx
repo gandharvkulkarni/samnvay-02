@@ -16,12 +16,12 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 p-8 md:p-12 rounded-3xl border-2 border-emerald-200">
+        <div className="relative bg-linear-to-br from-emerald-50 to-teal-50 p-8 md:p-12 rounded-3xl border-2 border-emerald-200">
 
           <div className="relative grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4 group cursor-pointer">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="shrink-0 w-12 h-12 bg-linear-to-br from-emerald-500 to-teal-500 text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
@@ -31,7 +31,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4 group cursor-pointer">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="shrink-0 w-12 h-12 bg-linear-to-br from-teal-500 to-cyan-500 text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
@@ -41,7 +41,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4 group cursor-pointer">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="shrink-0 w-12 h-12 bg-linear-to-br from-cyan-500 to-blue-500 text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -58,7 +58,7 @@ const Contact = () => {
               </p>
               <button
                 onClick={() => navigate('/book-consultation')}
-                className="w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="w-full inline-flex items-center justify-center px-6 py-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 Book Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
