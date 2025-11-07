@@ -22,7 +22,7 @@ import { SectionCard } from "./ui/SectionCard"
 import { YesNoField } from "./ui/YesNoField"
 import { RadioOption } from "./ui/RadioOption"
 import { FamilyDispute } from "@/types/FamilyDisputeForm"
-import { familyCaseCategory, familyDocumentType, marriageType } from "@/enums/enums"
+import { familyCaseCategory, familyDocumentType, familyReliefOptions, marriageType } from "@/enums/enums"
 import FileUploadForm from "./ui/FileUploadForm"
 
 export default function FamilyDisputeForm() {
@@ -462,9 +462,34 @@ export default function FamilyDisputeForm() {
 
                     {/* ISSUES / RELIEFS */}
                     <SectionCard number="6" title="Issues / Reliefs Sought">
-                        <FormField label="Issues or Reliefs Sought">
-                            <Textarea placeholder="Describe issues or reliefs sought" {...register("otherRelief")} />
-                        </FormField>
+                        <div className="space-y-5">
+                            <FormField label="Select the relief(s) you seek" required error={errors.reliefSought?.message}>
+                                <Controller
+                                    control={control}
+                                    name="reliefSought"
+                                    rules={{ required: "Please select a relief you seek" }}
+                                    render={({ field }) => (
+                                        <Select value={field.value} onValueChange={field.onChange}>
+                                            <SelectTrigger>
+                                                <SelectValue placeholder="Select Relief You Seek" />
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                {familyReliefOptions.map(v => (
+                                                    <SelectItem key={v} value={v}>{v}</SelectItem>
+                                                ))}
+                                            </SelectContent>
+                                        </Select>
+                                    )}
+                                />
+                            </FormField>
+
+                            {watch("reliefSought") === "Other Relief" && (
+                                <FormField label="Issues or Reliefs Sought">
+                                    <Textarea placeholder="Describe issues or reliefs sought" {...register("otherRelief")} />
+                                </FormField>
+                            )}
+
+                        </div>
                     </SectionCard>
 
                     {/* RESPONDENT’S PRELIMINARY RESPONSE */}
@@ -545,12 +570,12 @@ export default function FamilyDisputeForm() {
 
                     {/* DECLARATION */}
                     <SectionCard number="11" title="Declaration">
-                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <FormField label="Full Name" required error={errors?.declarationName?.message}>
-                                <Input placeholder="Enter your full name" {...register("declarationName", {required: "Please provide your name"})} />
+                                <Input placeholder="Enter your full name" {...register("declarationName", { required: "Please provide your name" })} />
                             </FormField>
                             <FormField label="Date" required error={errors?.declarationDate?.message}>
-                                <Input type="date" {...register("declarationDate", {required:"Please enter declaration date"})} />
+                                <Input type="date" {...register("declarationDate", { required: "Please enter declaration date" })} />
                             </FormField>
                         </div>
                     </SectionCard>

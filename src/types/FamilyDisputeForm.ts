@@ -50,14 +50,8 @@ export type FamilyDispute = {
     dependents: string,
 
     // Section 5: Issues/Reliefs
-    maintenanceRequested: boolean,
-    maintenanceAmount: string,
-    custodyRequested: boolean,
-    divorceByMutualConsent: boolean,
-    propertyDivision: boolean,
-    dowryReturn: boolean,
-    reconciliationSupport: boolean,
     otherRelief: string,
+    reliefSought: string
 
     // Section 6: Respondent's Response
     respondentVersion: string,
@@ -69,17 +63,6 @@ export type FamilyDispute = {
     courtName: string,
     currentStatus: string,
     previousMediation: string,
-
-    // Section 8: Documents
-    marriageCertificate: boolean,
-    aadhaarProof: boolean,
-    addressProof: boolean,
-    incomeProof: boolean,
-    childBirthCertificate: boolean,
-    firCopyOrder: boolean,
-    propertyProofs: boolean,
-    bankStatement: boolean,
-    medicalReport: boolean,
 
     // Section 9: Mediation Willingness
     mediationWillingness: string,

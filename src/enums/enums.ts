@@ -34,6 +34,15 @@ export const familyDocumentType = [
   { key: "medical_counselling_report", value: "Medical / Counselling Report" },
 ]
 
+export const familyReliefOptions = [
+  "Maintenance / Alimony (Amount requested",
+  "Custody / Visitation Rights",
+  "Divorce by Mutual Consent",
+  "Property or Asset Division",
+  "Return of Dowry / Stridhan / Personal Belongings",
+  "Reconciliation / Counselling Support",
+  "Other Relief"
+];
 
 export const marriageType = ["Hindu", "Muslim", "Christian", "Special Marriage Act", "Other"]
 
