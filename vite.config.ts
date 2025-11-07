@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
-import path from "path"
+import fs from 'fs'
+import path, { resolve } from "path"
 import tailwindcss from "@tailwindcss/vite"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(),
+    {
+      name: 'copy-redirects',
+      closeBundle() {
+        fs.copyFileSync(resolve(__dirname, '_redirects'), resolve(__dirname, 'dist/_redirects'))
+      },
+    }
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
