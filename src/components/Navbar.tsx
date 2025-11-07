@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import logo from '../../Samnvay-logo-new-black.png';
 import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const navItems = [
     { id: 'home', label: 'Home' },
@@ -9,13 +11,50 @@ const navItems = [
     // { id: 'how-it-works', label: 'How It Works' },
     { id: 'contact', label: 'Contact' },
 ];
-const Navbar = ({scrollToSection, isMenuOpen, setIsMenuOpen, scrollY, activeSection}: any) => {
+const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'services', 'how-it-works', 'why-us', 'contact'];
+            const scrollPosition = window.scrollY + 100;
+            setScrollY(window.scrollY);
+
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const offsetTop = element.offsetTop;
+                    const offsetHeight = element.offsetHeight;
+
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(section);
+                        break;
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsMenuOpen(false);
+        }
+    };
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-white/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
             }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
-                    <img src={logo} alt='Samnvay Logo' className='w-48' />
+                    <Link to={"/"}>
+                        <img src={logo} alt='Samnvay Logo' className='w-48' />
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-1">

@@ -9,6 +9,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { toast } from "sonner"
+import { addDataToGoogleSheet } from "@/lib/utils"
 
 type FormData = {
     name: string
@@ -42,21 +43,14 @@ export default function BookConsultation() {
     ]
 
     const onSubmit = async (data: FormData) => {
-        try {
-            await fetch("https://script.google.com/macros/s/AKfycbzIiwAF2gEae5XoDz0mw1zBitbsoYIynH7pNYouVpRYVymkh6YM1tRcKM5iYe4UYmvT/exec", {
-                method: "POST",
-                mode: "no-cors", // Apps Script doesn't need CORS headers
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            })
+        const dataSubmitted = await addDataToGoogleSheet(data, 'Consultation')
 
+        if (dataSubmitted) {
             toast.success(" Consultation request submitted successfully!")
             setSubmitted(true)
             reset()
-
-        } catch (error) {
+        }
+        else {
             toast.error("There was an error submitting your request. Please try again.")
         }
     }
@@ -65,7 +59,7 @@ export default function BookConsultation() {
     return (
         <section
             id="book-consultation"
-            className="relative py-24 px-6 bg-gradient-to-br from-[#ECFDF5] via-[#E0F7FA] to-[#EFF6FF]"
+            className="relative py-24 px-6 bg-linear-to-br from-[#ECFDF5] via-[#E0F7FA] to-[#EFF6FF]"
         >
             <div className="max-w-4xl mx-auto space-y-12 relative z-10">
                 <div className="text-center space-y-4">
@@ -194,7 +188,7 @@ export default function BookConsultation() {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-lg font-semibold rounded-lg hover:opacity-90 transition disabled:opacity-50"
+                        className="w-full py-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white text-lg font-semibold rounded-lg hover:opacity-90 transition disabled:opacity-50"
                     >
                         {isSubmitting ? "Submitting..." : "Book Consultation"}
                     </button>
